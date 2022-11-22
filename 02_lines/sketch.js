@@ -5,11 +5,14 @@ function setup() {
 }
 function draw() {
     // put drawing code here
-    l = random(0, 255);
-    x1 = random(0, width);
-    y1 = random(0, height);
-    x2 = random(0, width);
-    y2 = random(0, height);
-    stroke(l);
+    r = random(255);
+    g = random(255);
+    b = random(255);
+    strokeColor = color(r, g, b);
+    x1 = random(0, width/2);
+    y1 = random(0, height/2);
+    x2 = random(width/2, width);
+    y2 = random(height/2, height);
+    stroke(strokeColor);
     line(x1, y1, x2, y2);
 }
