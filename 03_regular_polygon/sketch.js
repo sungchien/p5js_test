@@ -8,7 +8,7 @@ function draw() {
     // put drawing code here
     x = width*0.5;
     y = height*0.5;
-    numEdges = 5;
+    numEdges = 7;
     r = 50;
     d = 180;
     beginShape();
