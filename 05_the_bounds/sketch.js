@@ -1,16 +1,16 @@
-var x = 120;
-var y = 60;
-var radius = 12;
+var radius = 30;
 
 function setup() {
     // put setup code here
-    createCanvas(240, 120);
+    createCanvas(480, 360);
     ellipseMode(RADIUS);
 }
 function draw() {
     // put drawing code here
     var d;
-    
+    var x = width/2;
+    var y = height/2;
+   
     background(204);
     d = dist(mouseX, mouseY, x, y);
     if (d < radius) {
