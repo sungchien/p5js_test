@@ -3,7 +3,7 @@ var rot_step = 0.01;
 
 function setup() {
     // put setup code here
-    createCanvas(200, 200);
+    createCanvas(400, 400);
 }
 function draw() {
     // put drawing code here
@@ -19,5 +19,5 @@ function draw() {
         rot_speed = 5;
     }
     angle+= (rot_speed*rot_step);
-    rect(0, 0, 30, 30);
+    rect(0, 0, 60, 60);
 }
