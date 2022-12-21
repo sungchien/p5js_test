@@ -14,16 +14,24 @@ function draw() {
             ellipse(mouseX, mouseY, 30, 30);
         }
         else if (toggle==1) {
-            fill(color('rgba(0, 255, 0, 0.1)'));
-            square(mouseX, mouseY, 30);
+            fill(color('rgba(255, 165, 0, 0.1)'));
+            ellipse(mouseX, mouseY, 30, 30);
         }
-        else {
+        else if (toggle==2) {
+            fill(color('rgba(255, 255, 0, 0.1)'));
+            ellipse(mouseX, mouseY, 30, 30);
+        }
+        else if (toggle==3){
+            fill(color('rgba(0, 255, 0, 0.1)'));
+            ellipse(mouseX, mouseY, 30, 30);
+        }
+        else if (toggle==4){
             fill(color('rgba(0, 0, 255, 0.1)'));
-            triangle(mouseX+15*sin(180), mouseY+15*cos(180), mouseX+15*sin(60), mouseY+15*cos(60), mouseX+15*sin(300), mouseY+15*cos(300));
+            ellipse(mouseX, mouseY, 30, 30);   
         }
     }
 }
 
 function mouseClicked() {
-    toggle = (toggle+1) % 3;
+    toggle = (toggle+1) % 5;
 }
