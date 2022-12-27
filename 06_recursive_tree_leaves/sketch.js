@@ -1,5 +1,3 @@
-const deg = 90;
-
 let baseLength;
 let minLength;
 let lengthRatio;
@@ -8,24 +6,31 @@ let angleChange;
 let leafDensity;
 let leafColor;
 
+const deg = 90;
+
 function setup() {
     // put setup code here
     createCanvas(400, 400);
     noLoop();
     angleMode(DEGREES);
     
-    baseLength = random(height / 8, height / 2);
+}
+
+function draw() {
+    newTree();
+}
+
+function newTree() {
+    background(220);
+    
+    baseLength = random(height / 8, height / 4);
     minLength = random(1, 10);
     lengthRatio = random(0.25, 0.75);
     angleChange = random(6, 60);
     
     leafDensity = random(0, 10);
     leafColor = color(random(0, 255), random(0, 255), random(0, 255));
-}
 
-function draw() {
-    background(220);
-    
     drawTree(
         width / 2,
         height,
