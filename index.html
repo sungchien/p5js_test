@@ -27,7 +27,7 @@
                 <dt><a href='02_points/point.html' target='_blank'>夜晚的星空</a></dt>
                 <dd>
                     隨機在畫布上加上一些點。
-                    <p>我們將學習在draw()裡加上點(point)。point()函數中的前兩個參數分別是x與y座標，在p5.js的系統中，畫布左上角的座標是(0, 0)，右下角的座標是(width-1, height-1)，width和height則是由createCanva()函數中設定。</p>
+                    <p>我們將學習在draw()裡加上點(point)，每次在畫面上增加一個點。point()函數中的前兩個參數分別是x與y座標。在p5.js的系統中，畫布左上角的座標是(0, 0)，右下角的座標是(width-1, height-1)，width和height則是由createCanva()函數中設定。</p>
                     <p>控制點以及其他幾何圖形的筆觸顏色與大小分別是stroke()和strokeWeight()，stroke()的參數是顏色值，strokeWeight()的參數則表示畫素(pixel)數。</p>
                     <p>最後，random()函數可以產生兩個參數之間的任何一個整數值。</p>
                     <ul>
@@ -39,19 +39,26 @@
                     </ul>
                 </dd>
                 
-                <dt><a href='02_lines/index.html' target='_blank'>燦爛煙花</a></dt>
+                <dt><a href='02_lines/line.html' target='_blank'>燦爛煙花</a></dt>
                 <dd>
                     隨機在畫布上加上一些直線。
+                    <p>我們將學習在draw()裡加上線(line)，每次在畫面上增加一條線。line()函數中有4個參數，分別代表開始與結束的x與y座標。我們使每一條線都從畫布的中心開始，向四周隨機放射。</p>
+                    <p>另外，利用color()可以指定要使用的顏色。color()內的三個參數分別表示顏色的紅、綠、藍的成分，數值從0到255之間。</p>
+                    <p>為了讓螢幕更新速度慢一些，在setup()當中，我們增加了一個函數frameRate()來調整重畫頻率。</p>
                     <ul>
                         <li>color()</li>
                         <li>line()</li>
+                        <li>frameRate()</li>
                     </ul>
                 </dd>
                 
-                <dt><a href='02_arcs/index.html' target='_blank'>
+                <dt><a href='02_arcs/arc.html' target='_blank'>
                     水波</a></dt>
                 <dd>
                     產生四個不同角度的圓弧。
+                    <p>我們將學習在draw()裡加上圓弧(arc)。arc()函數中有6個參數，前兩個是圓弧所在橢圓的中心座標，接著兩個參數分別是橢圓的寬與高，最後兩個代表開始與結束的角度。</p>
+                    <p>在p5.js當中，計算角度的預設方式是RADIANS，也就是弧度，整個圓周從0到2PI。為了方便使用，這裡將angleMode改為DEGREES，整個圓周從0到360。</p>
+                    <p>最後，我們希望產生的圓弧當中不要填滿，所以使用noFill()方法來設定。</p>
                     <ul>
                         <li>arc()</li>
                         <li>angleMode()</li>
