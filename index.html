@@ -12,9 +12,11 @@
         <section>
             <h2>畫布與點和線</h2>
             <dl>
-                <dt><a href='01_canva/index.html' target='_blank'>基本架構與畫布</a></dt>
+                <dt><a href='01_canva/canva.html' target='_blank'>基本架構與畫布</a></dt>
                 <dd>
                     簡要地說明p5.js的架構及畫布(canva)的概念。
+                    <p>這是第一個p5.js的設計，我們將學習利用createCanvas在網頁上製作一個畫布。createCanvas中包含兩個參數，分別是畫布的寬與高。另外，background函數則可以設定畫布的顏色。</p>
+                    <p>此外，我們也可以學習到p5.js中的兩個主要函數，setup和draw。前者設定網頁開啟後的初始狀態，後者則會依據固定頻率(60 fps)重新畫一次。</p>        
                     <ul>
                         <li>setup()與draw()</li>
                         <li>createCanvas()</li>
@@ -22,13 +24,17 @@
                     </ul>
                 </dd>
                 
-                <dt><a href='02_points/index.html' target='_blank'>夜晚的星空</a></dt>
+                <dt><a href='02_points/point.html' target='_blank'>夜晚的星空</a></dt>
                 <dd>
                     隨機在畫布上加上一些點。
+                    <p>我們將學習在draw()裡加上點(point)。point()函數中的前兩個參數分別是x與y座標，在p5.js的系統中，畫布左上角的座標是(0, 0)，右下角的座標是(width-1, height-1)，width和height則是由createCanva()函數中設定。</p>
+                    <p>控制點以及其他幾何圖形的筆觸顏色與大小分別是stroke()和strokeWeight()，stroke()的參數是顏色值，strokeWeight()的參數則表示畫素(pixel)數。</p>
+                    <p>最後，random()函數可以產生兩個參數之間的任何一個整數值。</p>
                     <ul>
                         <li>width和height</li>
                         <li>random()</li>
                         <li>stroke()</li>
+                        <li>strokWeight()</li>
                         <li>point()</li>
                     </ul>
                 </dd>
