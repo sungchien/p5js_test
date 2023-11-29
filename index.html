@@ -11,6 +11,7 @@
         </section>
         <section>
             <h2>畫布與點和線</h2>
+            <p>這一部份的程式簡單地說明p5.js主要的繪圖方式，包含設定與畫面更新，畫布與簡單幾何圖形等。</p>
             <dl>
                 <dt><a href='01_canva/canva.html' target='_blank'>基本架構與畫布</a></dt>
                 <dd>
@@ -70,25 +71,45 @@
         
         <section>
             <h2>任意的幾何圖形</h2>
+            <p>p5.js除了提供常見的簡單幾何形，如point、line、arc、circle、square、triangle等，之外，也可以運用在畫布上指定若干頂點，然後將其連接起來構成任意的幾何形。</p>
+            <p>這部分的程式將首先介紹如何運用頂點連線構成任意圖形，接著皆運用for迴圈以及if分支來產生較複雜的圖形。</p>
             <dl>
-                <dt><a href='03_arrow/index.html' target='_blank'>箭頭</a></dt>
-                <dd>設定開始、結束與中間的點，構成一個箭頭。
+                <dt><a href='03_pentagon/pentagon.html' target='_blank'>正五邊形</a></dt>
+                <dd>我們將學習運用vertex、beginShape、endShape和三角函數的sin和cos畫出正五邊形
+                    <p>運用startShape啟動開始畫圖形之後，在startShape和endShape之間的vertex會以線相連接。</p>
+                    <p>將圓周劃分成五等分，作為正五邊形的頂點。為了更了解這個五邊形勢如何畫出來的，我們在五邊形外加上一個圓，圓的半徑與五邊形的頂點到中心的距離相等。</p>
                     <ul>
                         <li>beginShape()</li>
                         <li>endShape()</li>
                         <li>vertex()</li>
-                    </ul>
-                </dd>
-                <dt><a href='03_pentagon/index.html' target='_blank'>正五邊形</a></dt>
-                <dd>運用三角函數：sin和cos
-                    <ul>
                         <li>sin()</li>
                         <li>cos()</li>
                     </ul>
                 </dd>
-                <dt><a href='03_regular_polygon/index.html' target='_blank'>正多邊形</a></dt>
-                <dd>for迴圈</dd>
-                <dt><a href='04_halftone_dots/index.html' target='_blank'>點陣圖</a></dt>
+
+                <dt><a href='03_regular_pentagon/regular_pentagon.html' target='_blank'>利用for迴圈畫出正五邊形</a></dt>
+                <dd>我們將學習運用以for迴圈簡化程式設計
+                    <p>在上一個程式當中，我們可以看到其中有相當多相同的敘述區塊，也就是我們重複做了很多次同樣的事情。
+                        如果這些事情，能夠自動完成，那麼我們就會比較省時省力，程式也會看起來比較簡潔易懂。
+                        在程式設計中，重複執行都是稱為迴圈(loop)。有兩種不同的迴圈，一種是條件式的while迴圈，另一種是列舉式的for迴圈。
+                        這裡因為我們知道迴圈進行的次數為6次，所以使用列舉式的for迴圈。
+                    </p>
+                </dd>
+                </dd>
+
+                <dt><a href='03_regular_polygon/regular_polygon.html' target='_blank'>指定邊數的正多邊形</a></dt>
+                <dd>我們將學習如何在p5.js中呈現文字與輸入資料
+                    <p>我們首先在畫布上呈現提示文字text()、輸入欄位createInput()與按鈕createButton()，提出使用者輸入正多邊形的邊數資料。</p>
+                    <p>當使用者輸入邊數，並按下按鈕後，先將輸入的文字以int()轉成整數值，然後畫出正多邊形。</p>
+                    <ul>
+                        <li>text()</li>
+                        <li>createInput()</li>
+                        <li>createButton()</li>
+                        <li>int()</li>
+                    </ul>
+                </dd>
+
+                <dt><a href='03_halftone_dots/halftone_dots.html' target='_blank'>點陣圖</a></dt>
                 <dd>雙重for迴圈以及if</dd>
             </dl>
         </section>
@@ -96,6 +117,14 @@
         <section>
             <h2>滑鼠的座標與按下</h2>
             <dl>
+                <dt><a href='04_triangles/triangles.html' target='_blank'>正三角形</a></dt>
+                <dd>根據正三角形的兩個頂點，計算出它的第三個點。
+                    <ul>
+                        <li>beginShape()</li>
+                        <li>endShape()</li>
+                        <li>vertex()</li>
+                    </ul>
+                </dd>
                 <dt><a href='05_the_bounds/index.html' target='_blank'>圓的變化</a></dt>
                 <dd>透過滑鼠的向內或向外產生不同的變化。
                     <ul>

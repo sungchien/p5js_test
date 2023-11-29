@@ -6,12 +6,13 @@ function setup() {
 }
 function draw() {
     // put drawing code here
-    for (var y = 32; y <= height-32; y += 8) {
-        for (var x = 12; x <= width; x += 15) {
+    band = 16;
+    for (var y = band; y <= height-band; y += 8) {
+        for (var x = y+band; x <= width-y; x += 8) {
             z = 16 - y/10.0;
             if (z<4)
                 z = 4;
-            ellipse(x+y, y, z, z);
+            circle(x, y, z);
         }
     }
 }
