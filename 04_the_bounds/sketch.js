@@ -3,7 +3,7 @@ var radius = 30;
 function setup() {
     // put setup code here
     createCanvas(480, 360);
-    ellipseMode(RADIUS);
+    colorMode(HSB);
 }
 function draw() {
     // put drawing code here
@@ -15,11 +15,15 @@ function draw() {
     d = dist(mouseX, mouseY, x, y);
     if (d < radius) {
         radius--;
-        fill(255, 69, 0);
+        hueValue = 240 - (1-d/radius)*50;
+        if (hueValue<0) hueValue = 0;
+        fill(hueValue, 75, 95);
     }
     else {
         radius++;
-        fill(218, 112, 214)
+        hueValue = 0 + (1-radius/d)*50;
+        if (hueValue>240) hueValue = 240;
+        fill(hueValue, 75, 95);
     }
-    ellipse(x, y, radius, radius);
+    circle(x, y, radius);
 }
