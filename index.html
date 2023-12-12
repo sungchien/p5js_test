@@ -162,21 +162,32 @@
         </section>
         <section>
             <h2>座標的轉換</h2>
+            <p>在上面的程式中，我們通常將座標系統固定，也就是使座標(0, 0)的位置固定在左上角，然後往右與往下分別增加X軸與Y軸的刻度。</p>
+            <p>在這種情形下，如果我們要移動或旋轉一個幾何圖形，只要對圖形上每一個重要的特徵點計算它們在移動和旋轉後新的座標位置即可。</p>
+            <p>此次的程式則是運用另外一種做法，我們移動(translate)或旋轉(rotate)座標系統，如此便不需要計算個特徵點的新位置。</p>
             <dl>
-                <dt><a href='06_translate_location/index.html' target='_blank'>旋轉的方塊</a></dt>
-                <dd>透過滑鼠的向內或向外產生不同的變化。
+                <dt><a href='05_translate_square/translate_square.html' target='_blank'>移動的方形</a></dt>
+                <dd>利用滑鼠移動一個方形。
+                    <p>當滑鼠按下時，捕捉當時滑鼠對應在畫布上的位置(mouseX, mouseY)，並請將(mouseX, mouseY)儲存到(x, y)。</p>
+                    <p>每次畫面更新時，利用translate(x, y)，以(x, y)為新的座標系統的原點，繪製一個中心點為原點的正方形。</p>
                     <ul>
                         <li>translate()</li>
+                    </ul>
+                </dd>
+                <dt><a href='05_rotate_pentagon/rotate_pentagon.html' target='_blank'>旋轉的正五邊形</a></dt>
+                <dd>點擊滑鼠時旋轉一個角度。
+                    <p>將圓均等地分為幾個部分。</p>
+                    <p>以畫布的中心為中心，繪製一個正五邊形。</p>
+                    <p>每次點擊滑鼠時便將座標系統旋轉一個部分，相對來說就像五邊形旋轉一個角度。</p>
+                    <ul>
                         <li>rotate()</li>
                     </ul>
                 </dd>
-                <dt><a href='06_translate_image/index.html' target='_blank'>字形的改變</a></dt>
-                <dd>
-                    <ul>
-                        <li>textSize()</li>
-                    </ul>
+                <dt><a href='05_translate_location/translate_location.html' target='_blank'>旋轉的三角形</a></dt>
+                <dd>利用滑鼠移動一個方形，並在按下滑鼠時加快旋轉的速度。
+                    <p>運用前面兩個程式的translate()和rotate()。</p>
                 </dd>
-                <dt><a href='06_recursive_tree/index.html' target='_blank'>建立生長樹</a></dt>
+                <dt><a href='05_recursive_tree/recursive_tree.html' target='_blank'>建立生長樹</a></dt>
                 <dd>遞迴
                     <ul>
                         <li>recursive</li>

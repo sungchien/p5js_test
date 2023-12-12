@@ -18,5 +18,5 @@ function draw() {
 }
 
 function mouseClicked() {
-    toggle = (toggle+1) % 5;
+    toggle = (toggle+1) % toggleColor;
 }
